@@ -1,11 +1,13 @@
 body {
   margin: 0;
   padding: 0;
-}.box_text_color {
+}
+.box_text_color {
   color: white;
   padding: 10px;
   margin: 0;
-}.td_image_width {
+}
+.td_image_width {
   width: 570px;
 }
 
@@ -13,11 +15,13 @@ body {
   width: 570px;
   height: 400px;
   display: block;
-}p {
+}
+p {
   font-family: Arial;
   font-size: 16px;
   color: #3d3d3d;
-}.box1 {
+}
+.box1 {
   background-color: darkred;
   text-align: center;
 }
