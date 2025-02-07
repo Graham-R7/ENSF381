@@ -1,24 +1,31 @@
-/* Reset styling */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  color: #333;
-}
-
-.banner img {
-  width: 100%;
-  height: auto;
-}
-
-.history {
-  background-color: #f4f4f4;
-  padding: 20px;
-  text-align: center;
+  padding: 0;
 }
 
 .table2 {
   border-spacing: 20px;
-  width: 100%;
+}
+
+.box1 {
+  background-color: darkred;
+  text-align: center;
+}
+
+.box2 {
+  background-color: deeppink;
+  text-align: center;
+}
+
+.box3 {
+  background-color: brown;
+  text-align: center;
+}
+
+.box_text_color {
+  color: white;
+  padding: 10px;
+  margin: 0;
 }
 
 .td_image_width {
@@ -29,27 +36,4 @@ body {
   width: 570px;
   height: 400px;
   display: block;
-}
-
-.box_text_color {
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-.box1 {
-  background-color: darkred;
-}
-
-.box2 {
-  background-color: deeppink;
-}
-
-.box3 {
-  background-color: brown;
-}
-
-a {
-  color: white;
-  text-decoration: underline;
 }
