@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 style="text-decoration: underline; font-style: italic">THERE IS NOTHING HERE!!!!</h1>
+    <script>
+        // Commenting out the functions from the previous section
+        // function add(num1, num2) {
+        //     return num1 + num2;
+        // }
+        // function subtract(num1, num2) {
+        //     return num1 - num2;
+        // }
+
+        // Using Default Parameters with num1 and num2 as 0
+        function add(num1, num2 = 0) {
+            return num1 + num2;
+        }
+        function subtract(num1, num2 = 0) {
+            return num1 - num2;
+        }
+
+        // Implementing Arrow Functions
+        const multiply = (num1, num2) => num1 * num2;
+        const divide = (num1, num2) => {
+            if (num2 === 0) {
+                // === -> checks for strict equality, better than ==
+                return "Cannot divide by zero";
+            }
+            return num1 / num2;
+        };
+
+        // Understanding Callback Functions
+        function calculator(num1, num2, callback) {
+            return callback(num1, num2);
+        }
+
+        // Testing the functions
+        console.log(add(10));
+        console.log(subtract(10));
+        console.log(multiply(10, 5));
+        console.log(divide(10, 0));
+        console.log(calculator(10, 5, add));
+        console.log(calculator(10, 5, multiply));
+    </script>
+</body>
+</html>
