@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 style="text-decoration: underline; font-style: italic">THERE IS NOTHING HERE!!!!</h1>
+    <script>
+       // Making an array called class roster
+       classRoster = ["Alice","Tom","Charlie","Diana","Evan"]; 
+       console.log(classRoster.toString());
+       console.log("Initial classRoster: ", classRoster);
+       classRoster.push("Fiona", "Nancy");
+       classRoster.shift();
+       console.log("Updated classRoster: ", classRoster);
+       console.log("Length of classRoster: ", classRoster.length);
+
+       // Creating an object named classInfo
+       classInfo = {
+           className: 'ENSF381: Full-Stack Web Development',
+           instructor: 'Dr. Smith',
+           students: classRoster,
+           details: {
+               semester: 'Winter',
+               year: 2025
+           },
+           schedule: ["Monday", "Wednesday", "Friday"]
+       };
+       classInfo.instructor = 'Dr. Abdellatif';
+       console.log("ClassName: ", classInfo.className);
+       console.log("Instructor: ", classInfo.instructor);
+       console.log("Students: ", classInfo.students);
+       console.log("Semester: ", classInfo.details.semester);
+
+       const {className, students} = classInfo;
+       console.log("className: ", className);
+       console.log("students: ", students);
+
+       const {semester, year} = classInfo.details;
+       console.log("Semester: ", semester);
+       console.log("Year: ", year);
+
+       const [student1, student2, ...remainingStudents] = classRoster;
+       console.log("Student 1: ", student1);
+       console.log("Student 2: ", student2);
+       console.log("Remaining Students: ", remainingStudents);
+    </script>
+</body>
+</html>
