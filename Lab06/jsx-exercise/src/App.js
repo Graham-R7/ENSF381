@@ -1,6 +1,10 @@
+import React from 'react';
+import Home from './Home';
+import About from './About';
+import Contact from './Contact';
 function App() {
   const currentYear = new Date().getFullYear();
-  const isLoggedIn = true; // Set to false to test the alternative message
+  const isLoggedIn = true;
 
   return (
     <div className="App">
@@ -8,6 +12,9 @@ function App() {
       <p>React Components</p>
       <p>{currentYear}</p>
       <p>{isLoggedIn ? "Welcome back!" : "Please log in."}</p>
+      <Home/>
+      <About/>
+      <Contact/>
     </div>
   );
 }
