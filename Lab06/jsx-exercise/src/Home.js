@@ -1,10 +1,12 @@
 import React from 'react';
-function Home() {
+
+function Home({ title, description }) {
   return (
     <div className="App">
-      <h1>Welcome to the Home Page</h1>
+      <h1>{title}</h1>
+      <p>{description}</p>
     </div>
   );
 }
-export default Home;
 
+export default Home;

@@ -1,10 +1,12 @@
 import React from 'react';
-function About() {
-    return (
-        <div className="App">
-          <h1>About Us</h1>
-        </div>
-    );
-}
-export default About;
 
+function About({ title, description }) {
+  return (
+    <div className="App">
+      <h1>{title}</h1>
+      <p>{description}</p>
+    </div>
+  );
+}
+
+export default About;
