@@ -1,3 +1,6 @@
+import React from 'react';
+import EngineeringTopics from './EngineeringTopics';
+
 function App() {
   const currentYear = new Date().getFullYear();
   const isLoggedIn = true; // Set to false to test the alternative message
@@ -8,8 +11,10 @@ function App() {
       <p>React Components</p>
       <p>{currentYear}</p>
       <p>{isLoggedIn ? "Welcome back!" : "Please log in."}</p>
+      <EngineeringTopics />
     </div>
   );
 }
 
 export default App;
+
