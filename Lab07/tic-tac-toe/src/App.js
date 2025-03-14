@@ -1,11 +1,12 @@
 import './App.css';
 import { useState } from "react"; 
 
-function Square() { 
+function Square(props) { 
   const [value, setValue] = useState(null); 
  
   function handleClick() { 
-    setValue('X'); 
+    setValue(props.isXTurn ? 'X' : 'O'); 
+    props.onClick(); 
   } 
   return ( 
     <button 
@@ -18,44 +19,34 @@ function Square() {
 } 
 
 export function Board() {
+  const [isXTurn, setTurn] = useState(true); 
+  const [squares, setSquares] = useState(Array(9).fill(null)); 
+
+  function handleClick(index) { 
+    const nextSquares = squares.slice(); 
+    nextSquares[index] = isXTurn ? 'X' : 'O'; 
+    setSquares(nextSquares); 
+    setTurn(!isXTurn); 
+  } 
+
   return (
     <>
       <div className="board-row">
-        <Square />
-        <Square />
-        <Square />
+        <Square isXTurn={isXTurn} onClick={() => handleClick(0)} />
+        <Square isXTurn={isXTurn} onClick={() => handleClick(1)} />
+        <Square isXTurn={isXTurn} onClick={() => handleClick(2)} />
       </div>
       <div className="board-row">
-        <Square />
-        <Square />
-        <Square />
+        <Square isXTurn={isXTurn} onClick={() => handleClick(3)} />
+        <Square isXTurn={isXTurn} onClick={() => handleClick(4)} />
+        <Square isXTurn={isXTurn} onClick={() => handleClick(5)} />
       </div>
       <div className="board-row">
-        <Square />
-        <Square />
-        <Square />
+        <Square isXTurn={isXTurn} onClick={() => handleClick(6)} />
+        <Square isXTurn={isXTurn} onClick={() => handleClick(7)} />
+        <Square isXTurn={isXTurn} onClick={() => handleClick(8)} />
       </div>
     </>
-  );
-export default function Board() { 
-  return ( 
-    <> 
-      <div className="board-row"> 
-        <Square /> 
-        <Square /> 
-        <Square /> 
-      </div> 
-      <div className="board-row"> 
-        <Square /> 
-        <Square /> 
-        <Square /> 
-      </div> 
-      <div className="board-row"> 
-        <Square /> 
-        <Square /> 
-        <Square /> 
-      </div> 
-    </> 
   ); 
 }
 
