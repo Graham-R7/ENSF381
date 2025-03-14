@@ -42,19 +42,19 @@ export default function Board() {
     <div>
       <div className="status">{status}</div> 
       <div className="board-row">
-        <Square isXTurn={isXTurn} onClick={() => handleClick(0)} />
-        <Square isXTurn={isXTurn} onClick={() => handleClick(1)} />
-        <Square isXTurn={isXTurn} onClick={() => handleClick(2)} />
+        <Square isXTurn={isXTurn} onClick={() => handleClick(0)} value={squares[0]} />
+        <Square isXTurn={isXTurn} onClick={() => handleClick(1)} value={squares[1]} />
+        <Square isXTurn={isXTurn} onClick={() => handleClick(2)} value={squares[2]} />
       </div>
       <div className="board-row">
-        <Square isXTurn={isXTurn} onClick={() => handleClick(3)} />
-        <Square isXTurn={isXTurn} onClick={() => handleClick(4)} />
-        <Square isXTurn={isXTurn} onClick={() => handleClick(5)} />
+        <Square isXTurn={isXTurn} onClick={() => handleClick(3)} value={squares[3]} />
+        <Square isXTurn={isXTurn} onClick={() => handleClick(4)} value={squares[4]} />
+        <Square isXTurn={isXTurn} onClick={() => handleClick(5)} value={squares[5]} />
       </div>
       <div className="board-row">
-        <Square isXTurn={isXTurn} onClick={() => handleClick(6)} />
-        <Square isXTurn={isXTurn} onClick={() => handleClick(7)} />
-        <Square isXTurn={isXTurn} onClick={() => handleClick(8)} />
+        <Square isXTurn={isXTurn} onClick={() => handleClick(6)} value={squares[6]} />
+        <Square isXTurn={isXTurn} onClick={() => handleClick(7)} value={squares[7]} />
+        <Square isXTurn={isXTurn} onClick={() => handleClick(8)} value={squares[8]} />
       </div>
     </div>
   ); 
