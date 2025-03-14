@@ -39,8 +39,8 @@ export default function Board() {
     status = 'Next player: ' + (isXTurn ? 'X' : 'O'); 
   }
   return (
-    <>
-    <div className="status">{status}</div> 
+    <div>
+      <div className="status">{status}</div> 
       <div className="board-row">
         <Square isXTurn={isXTurn} onClick={() => handleClick(0)} />
         <Square isXTurn={isXTurn} onClick={() => handleClick(1)} />
@@ -56,7 +56,7 @@ export default function Board() {
         <Square isXTurn={isXTurn} onClick={() => handleClick(7)} />
         <Square isXTurn={isXTurn} onClick={() => handleClick(8)} />
       </div>
-    </>
+    </div>
   ); 
 }
 
