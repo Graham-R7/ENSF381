@@ -1,5 +1,6 @@
 import requests 
-from bs4 import BeautifulSoup 
+from bs4 import BeautifulSoup
+import matplotlib.pyplot as plt  
  
 url = "https://en.wikipedia.org/wiki/University_of_Calgary" 
  
@@ -21,6 +22,10 @@ h6 = soup.find_all('h6')
 a = soup.find_all('a')
 p = soup.find_all('p')
 
+headings = len(h1 + h2 + h3 + h4 + h5 + h6)
+links = len(a)
+paragraphs = len(p)
+
 print("Number of <h1>: ", len(h1))
 print("Number of <h2>: ", len(h2))
 print("Number of <h3>: ", len(h3))
@@ -29,5 +34,11 @@ print("Number of <h5>: ", len(h5))
 print("Number of <h6>: ", len(h6))
 print("Number of <a>: ", len(a))
 print("Number of <p>: ", len(p))
-print("Finished Data Analysis")
-
+ 
+labels = ['Headings', 'Links', 'Paragraphs'] 
+values = [headings, links, paragraphs] 
+ 
+plt.bar(labels, values) 
+plt.title('Group 2') 
+plt.ylabel('Count') 
+plt.show()
