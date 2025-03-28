@@ -6,8 +6,8 @@ import pandas as pd
 app = Flask(__name__)
 CORS(app)
 
-# Hardcoded credentials for demo purposes
-# In a real application, you would use a secure database and password hashing
+model = joblib.load("./src/random_forest_model.pkl")
+
 VALID_CREDENTIALS = {
     "admin": "password123"
 }
