@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Login from './Login';
-import HousePricePredictor from './HousePricePredictor';
+import Login from './/Frontend/Login';
+import HousePricePredictor from './/Frontend/HousePricePredictor';
 
 const App = () => (
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Login />} />
-      <Route path="/courses" element={<HousePricePredictor />} />
+      <Route path="/predict" element={<HousePricePredictor />} />
     </Routes>
   </BrowserRouter>
 );
