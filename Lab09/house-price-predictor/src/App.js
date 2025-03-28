@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Login from './/Frontend/Login';
-import HousePricePredictor from './/Frontend/HousePricePredictor';
+import Login from './Frontend/Login';
+import HousePricePredictor from './Frontend/HousePricePredictor';
 
 const App = () => (
   <BrowserRouter>
