@@ -29,7 +29,7 @@ const HousePricePredictor = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("/predict_house_price", {
+      const response = await fetch("http://localhost:5000/predict_house_price", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
