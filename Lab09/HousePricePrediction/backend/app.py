@@ -6,28 +6,21 @@ import pandas as pd
 app = Flask(__name__)
 CORS(app)
 
-USERS = {
-    "alice": "password123",
-    "bob": "secure456",
-    "charlie": "qwerty789",
-    "diana": "hunter2",
-    "eve": "passpass",
-    "frank": "letmein",
-    "grace": "trustno1",
-    "heidi": "admin123",
-    "ivan": "welcome1",
-    "judy": "password1",
+# Hardcoded credentials for demo purposes
+# In a real application, you would use a secure database and password hashing
+VALID_CREDENTIALS = {
+    "admin": "password123"
 }
-
-model = joblib.load("./src/random_forest_model.pkl")
 
 @app.route('/validate_login', methods=['POST'])
 def validate_login():
     data = request.json
-    username, password = data.get("username"), data.get("password")
-    if USERS.get(username) == password:
-        return jsonify({"success": True, "message": "Login successful!"})
-    return jsonify({"success": False, "message": "Invalid username or password"}), 401
+    username = data.get('username')
+    password = data.get('password')
+    
+    if username in VALID_CREDENTIALS and VALID_CREDENTIALS[username] == password:
+        return jsonify({"status": "success"}), 200
+    return jsonify({"status": "error", "message": "Invalid credentials"}), 401
 
 @app.route('/predict_house_price', methods=['POST'])
 def predict_house_price():
