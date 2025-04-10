@@ -9,7 +9,16 @@ CORS(app)
 model = joblib.load("./src/random_forest_model.pkl")
 
 VALID_CREDENTIALS = {
-    "admin": "password123"
+    "alice": "password123",
+    "bob": "secure456",
+    "charlie": "qwerty789",
+    "diana": "hunter2",
+    "eve": "passpass",
+    "frank": "letmein",
+    "grace": "trustno1",
+    "heidi": "admin123",
+    "ivan": "welcome1",
+    "judy": "password1"
 }
 
 @app.route('/validate_login', methods=['POST'])
